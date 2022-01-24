@@ -1,0 +1,30 @@
+.sidebar-toggle{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 2px;
+    left: 5px;
+    transition: transform 1s , box-shadow 0.5s ;
+    z-index: 99;
+    outline: none;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+}
+.sidebar-toggle:hover{
+	cursor: pointer;
+}
+.sidebar-toggle:active{
+	cursor: pointer;
+}
+.sidebar-toggle.collapsed{
+	transform: rotate(180deg);
+}
+.sidebar-toggle path{
+    fill:#0061ff;
+}
+.sidebar-toggle:hover path{
+    fill:#004ecd;
+}

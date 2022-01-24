@@ -1,0 +1,55 @@
+#schedule-nav{
+	position: absolute;
+	display: flex;
+	align-items: center;
+	top: 1px;
+	left: 40px;
+	z-index: 99;
+	background-color: transparent;
+	padding: 0;
+	margin: 0;
+}
+.schedule-nofullmode{
+    display: flex;
+    align-items: center;
+    padding: 2px 5px 0 5px;
+    outline:none;
+    border-radius: 5px;
+    border:none;
+    font-weight:bold;
+    animation: slide 0.2s;
+}
+.schedule-nofullmode span{
+    padding:0 2px;
+}
+.schedule-nofullmode:hover{
+    cursor: pointer;
+}
+.schedule-nofullmode:active{
+    cursor: pointer;
+}
+.schedule-nofullmode.off{
+    color:grey;
+    background-color: #e6e6e6;
+}
+.schedule-nofullmode.off path{
+    fill:grey;
+}
+
+
+.schedule-nofullmode.off:hover{
+    color:#404040;
+}
+.schedule-nofullmode.off:hover path{
+    fill: #404040;
+}
+.schedule-nofullmode.on{
+    color:#008000;
+    background-color:#cdffcd;
+}
+.schedule-nofullmode.on path{
+    fill:#008000;
+}
+.schedule-nofullmode.on:hover{
+	background-color:#b6e3b6;
+}

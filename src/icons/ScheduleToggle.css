@@ -1,0 +1,44 @@
+.schedule-toggle{
+    outline:none;
+    background: transparent;
+    background-color: transparent;
+    border:none;
+    padding:0;
+    margin:0;
+}
+.schedule-toggle:hover,.schedule-toggle:active{
+    cursor:pointer;
+}
+.schedule-toggle #rectangle,
+.schedule-toggle #circle,
+.schedule-toggle #outline{
+    transition: fill 0.2s;
+}
+
+.schedule-toggle.on #rectangle{
+    fill: #97c5ff;
+}.schedule-toggle.on #circle{
+    fill: #ff6359;
+}.schedule-toggle.on #outline{
+    fill: #141124;
+}
+.schedule-toggle.on:hover #rectangle{
+    fill:#6fafff;
+}
+.schedule-toggle.on:active #rectangle{
+    fill:#4799ff;
+}
+
+.schedule-toggle.off #rectangle{
+    fill: #999999;
+}.schedule-toggle.off #circle{
+    fill: black;
+}.schedule-toggle.off #outline{
+    fill: #5e5e5e;
+}
+.schedule-toggle.off:hover #outline{
+    fill: #141124;
+}
+.schedule-toggle.off:active #rectangle{
+    fill: #cbcbcb;
+}

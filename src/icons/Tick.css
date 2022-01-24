@@ -1,0 +1,6 @@
+.tick{
+	margin-right : 5px;
+}
+.tick path{
+	fill : green;
+}
