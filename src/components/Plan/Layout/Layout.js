@@ -20,7 +20,7 @@ const NewState = (state,slight=false) => {
 		alphaSchedule: state.alphaSchedule};
 };
 
-const FUCKOFF = (state,column,row,lastdisplay) => {
+const process_NewState = (state,column,row,lastdisplay) => {
 		for(let counter=0;counter<state.voiid.row;counter++)
 			state._2d[state.voiid.col].layout_courses[counter].y -= (state.voiid.height+rowSpacing);
 		state._2d[state.voiid.col].height -= (state.voiid.height+rowSpacing);
@@ -70,13 +70,13 @@ const LayoutReducer = (state,action) => {
 							if(state.voiid.col===column && state.voiid.row===0
 							&& state.layout_filler.x===state._2d[column].xstart && state.layout_filler.y===rowSpacing && state.layout_filler.display)
 								return state;
-							else return FUCKOFF(state,column,0,true);
+							else return process_NewState(state,column,0,true);
 						}
 						else{
 							for(let row=arr.length-1 ; row>=0 ; row--){
 								if( y<=(arr[row].y + leeway) && y>=(arr[row].y - rowSpacing - leeway)
 								&& (state.voiid.col!==column || state.voiid.row!==row+1)){
-									return FUCKOFF(state,column,row+1,false);
+									return process_NewState(state,column,row+1,false);
 								}
 							}
 							return state;
@@ -102,7 +102,7 @@ const LayoutReducer = (state,action) => {
 			state._2d[state.voiid.col].layout_courses.splice(state.voiid.row,1);
 			for(let counter = state.voiid.row ; counter < state._2d[state.voiid.col].layout_courses.length ; counter++)
 				state.hash[state._2d[state.voiid.col].layout_courses[counter].index].row--;
-			if(state.voiid.row===0) { return FUCKOFF(state,state.voiid.col,0,true); }
+			if(state.voiid.row===0) { return process_NewState(state,state.voiid.col,0,true); }
 			return NewState(state);
 		}
 		else if(action[0]==='dragend' && state.voiid.index!==undefined){ // voiid , addonly_render , hash , _2d
