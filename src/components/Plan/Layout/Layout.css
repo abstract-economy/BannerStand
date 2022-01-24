@@ -1,9 +1,0 @@
-#layout{
- padding: 0;
- margin: 0;
- position: absolute;
- overflow: auto;
- top: 0;
- height: -webkit-fill-available;
- transition: left 1s, width 1s;
-}
