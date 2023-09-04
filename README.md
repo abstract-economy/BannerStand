@@ -16,3 +16,6 @@ The fact that I could build my own software over another piece of software _that
 
 ## First ever product!
 The server code is monolithic and non-modularized. Literally one file has everything :) But that's understandable because this is my first piece of software that I build for others to use.
+
+
+##### _Discontinued, more ambitious stuff ahead_
